@@ -3,12 +3,12 @@ const path = require('path');
 const app = express();
 
 // Serve static files from the Angular dist folder
-app.use(express.static(path.join(__dirname, 'dist/client'))); // Replace 'your-app-name'
+app.use(express.static(path.join(__dirname, 'dist/client/browser'))); // Replace 'your-app-name'
 
 // Handle all other requests by serving index.html
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/client/browser/index.html')); // Replace 'your-app-name'
-    console.log('Response inside server.js: ', res);
+    //console.log('Response inside server.js: ', res);
 });
 
 // Set port and start server
