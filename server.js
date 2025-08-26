@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'dist/client'))); // Replace 'your-app-name'
 
 // Handle all other requests by serving index.html
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/client/index.html')); // Replace 'your-app-name'
     console.log('Response inside server.js: ', res);
 });
